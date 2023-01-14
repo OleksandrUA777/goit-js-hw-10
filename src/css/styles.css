@@ -16,5 +16,36 @@ body {
   font: inherit;
   padding: 8px;
   max-width: 320px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
+ul{
+  list-style: none;
+}
+.country-list{
+  padding: 3px;
+  margin: 0;
+}
+.country-list__item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.heading{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.country-info__name{
+  margin: 0;
+}
+ .span-bold{
+  font-weight: bold;
+ } 
+ .country-info__list{
+  padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
