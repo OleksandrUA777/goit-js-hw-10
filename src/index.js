@@ -16,7 +16,8 @@ function inputChangeHandler(event){
     clearData()
      const input = event.target.value 
 
-     const fixedInput = input.trim()            
+     const fixedInput = input.trim()
+             
     if(fixedInput === ''){
                 clearData()
       return 
@@ -43,13 +44,14 @@ let languagesList = ''
     languagesList = String(languagesArray)
     
     }
-                const markup =  `<div class="heading">
+           const markup =  `<div class="heading">
                 <img src="${flags.svg}" alt="${name.common}" width ='35'><h1 class="country-info__name">${name.common}</h1>
               </div>
                 <ul class="country-info__list">
                 <li class="country-info__item"><span class="span-bold">Capital: </span>${capital}</li>
                 <li class="country-info__item"><span class="span-bold">Population: </span>${population}</li>
                 <li class="country-info__item"><span class="span-bold">Languages: </span>${languagesList}</li>
+                
               </ul>`
               
                 refs.info.insertAdjacentHTML('beforeend',markup)
@@ -60,7 +62,7 @@ let languagesList = ''
         if(countries.length > 10){
         Notiflix.Notify.info('Too many matches found. Please enter a more specific name.')
     }
-    })
+    }).catch(error => console.log(error))
 
 }
 function clearData(){

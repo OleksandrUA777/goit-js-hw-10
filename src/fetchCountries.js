@@ -3,7 +3,7 @@ import Notiflix from 'notiflix';
 export {fetchCountries}
 
 function fetchCountries(name){
-    return fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages
+    return fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages,area
     `)
     .then(response =>{
         //  console.log('від від беку: ',response)
